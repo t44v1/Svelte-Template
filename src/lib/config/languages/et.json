@@ -1,0 +1,9 @@
+{
+  "Home": {
+    "title": "Tere, Maailm!",
+    "welcome": "Tere <strong>{{name}}</strong>, kuidas sul läheb?"
+  },
+  "Test": {
+    "title": "EEsti ,Also R, World!"
+  }
+}

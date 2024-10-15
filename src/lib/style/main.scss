@@ -1,0 +1,58 @@
+:root{
+  iframe {display: none !important}
+
+  body {
+    --head-foot: 30px;
+    --sidebar: 250px;
+
+
+  // Color theory & symbolism
+    --primary: var(--theme, #f90); /* Link, Border */
+    --secondary: color-mix(in oklab, var(--primary), #111 90%); // Bottom layer - Aside
+    --transparent: color-mix(in oklab, var(--primary), #0000 90%); // Top Layer - Button, Clickble
+
+    --background: repeating-linear-gradient(-45deg, #090909 0 20px, black 20px 40px)
+
+    // 32
+} }
+
+
+body {
+  margin: calc(var(--head-foot) + 15px) 15px;
+  min-height: calc(100vh - ( var(--head-foot) + 15px ) * 2);
+  &::-webkit-scrollbar {display: none;}
+
+  > div {
+    display: grid !important;
+    @media (min-width: 800px){
+      grid: "s m" 1fr / var(--sidebar) 1fr;
+
+      main {
+        grid-area: m;
+      }
+  
+      aside {
+        grid-area: s;
+      }
+    }
+  }
+}
+
+
+
+
+center {
+  text-align: start;
+  margin-inline: auto;
+  width: min(100%,1200px);
+}
+
+:is(h1){
+  font: normal normal bold 2rem/1 system-ui;
+  margin: 0;
+}
+
+:is(p, a){
+  font: normal normal normal 1rem/1 system-ui;
+  margin: 0;
+}
