@@ -1,24 +1,23 @@
-# Aside
-Each sidebar inner asset file must contains own language json and use `$site.lang` to update screen content.
+# Layout Components
+Each components inner asset file must contains own language json and use `$language` to update screen content.
+
 ## Setup
 ```
-import { site } from '$lib/store/svelte_store';
+import { language } from '$lib/store/svelte_store';
 
 let content = {
   en: {
-    "title": "Hello, World!",
-    "welcome": "Hi <strong>{{name}}</strong>, how are you?",
-    "time": "The current time is: {{time}}"
+    "title": "Example",
+    "welcome": "sample content"
   },
   et: {
-    "title": "Tere, Maailm!",
-    "welcome": "Tere <strong>{{name}}</strong>, kuidas sul läheb?",
-    "time": "Praegune kellaaeg on: {{time}}"
+    "title": "Näide",
+    "welcome": "näidis sisu"
   }
 }
 ```
 
 ## Usage
 ```
-{content.[key].[$site.lang]}
+{content.[$language].[key]}
 ```

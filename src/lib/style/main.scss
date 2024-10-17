@@ -24,17 +24,14 @@ body {
 
   > div {
     display: grid !important;
-    @media (min-width: 800px){
-      grid: "s m" 1fr / var(--sidebar) 1fr;
-
-      main {
-        grid-area: m;
-      }
-  
-      aside {
-        grid-area: s;
+    &:has(aside){
+      @media (min-width: 800px){
+        grid: "s m" 1fr / var(--sidebar) 1fr;
+        main { grid-area: m }
+        aside { grid-area: s }
       }
     }
+    
   }
 }
 
